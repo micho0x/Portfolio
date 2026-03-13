@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="0xMicho — Pentester & Bug Bounty Hunter. Cybersecurity portfolio showcasing web pentesting, API vulnerabilities, and bug bounty achievements." />
+    <title>0xMicho | Cybersecurity Portfolio</title>
+
+    <!-- FOUC Prevention: Apply theme before render -->
+    <script>(function(){const savedTheme = localStorage.getItem('theme') || 'dark'; document.documentElement.setAttribute('data-theme', savedTheme);})();</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor-glow"></div>
+    <div class="noise-overlay"></div>
+
+    <!-- ═══ Navbar ══════════════════════════════════════════════════════ -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="brand">0xMicho<span>.</span></a>
+
+        <button class="mobile-toggle" aria-label="Toggle Navigation">
+          <i class="ph ph-list"></i>
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+
+          <li class="dropdown">
+            <a href="cyber-security/web-pentest.html">Cyber Security <i class="ph ph-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-submenu">
+                <a href="cyber-security/web-pentest.html">Web Pentest <i class="ph ph-caret-right"></i></a>
+                <ul class="dropdown-menu sub-menu">
+                  <li><a href="cyber-security/web-pentest.html#bug-bounty">Bug Bounty Achievements</a></li>
+                  <li><a href="cyber-security/web-pentest.html#books">Books I've Read</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="disabled">Network Pentest <span class="badge-soon">Soon</span></a></li>
+              <li><a href="#" class="disabled">Android Pentest <span class="badge-soon">Soon</span></a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="projects/lotus.html">Projects <i class="ph ph-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="projects/lotus.html">Lotus Tool</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#about">About Me</a></li>
+
+          <li>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+              <i class="ph ph-sun light-icon"></i>
+              <i class="ph ph-moon dark-icon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ═══ Hero ═══════════════════════════════════════════════════════ -->
+      <section id="home" class="hero section">
+        <div class="hero-content">
+          <div class="profile-container tilt-card" data-tilt>
+            <div class="profile-glow"></div>
+            <img src="imgs/myimage.jpg" alt="0xMicho Profile" class="profile-pic" />
+          </div>
+
+          <h1 class="glitch" data-text="0xMicho">0xMicho</h1>
+          <h2 class="subtitle">
+            &gt;&nbsp;Pentester &amp; Bug Bounty Hunter<span class="cursor-blink">|</span>
+          </h2>
+
+          <p class="bio">
+            Hi, I'm Micho. A high school student from Egypt, a proud Muslim, and a Cybersecurity
+            enthusiast specializing in Web and API penetration testing. I have a deep passion for
+            offensive security, a strong drive to constantly develop my skills, and a commitment
+            to helping others in the community.
+          </p>
+
+          <div class="social-links">
+            <a href="https://github.com/micho0x" target="_blank" class="social-icon" aria-label="GitHub">
+              <i class="ph ph-github-logo"></i>
+            </a>
+            <a href="https://hackerone.com/0xmicho?type=user" target="_blank" class="social-icon" aria-label="HackerOne">
+              <span class="h1-logo">H1</span>
+            </a>
+            <a href="https://x.com/0xmicho1" target="_blank" class="social-icon" aria-label="X (Twitter)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:block;flex-shrink:0;">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.633 5.905-5.633Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/>
+              </svg>
+            </a>
+            <a href="https://tryhackme.com/p/0xmicho" target="_blank" class="social-icon" aria-label="TryHackMe">
+              <img src="imgs/thm-logo.png" alt="TryHackMe" class="social-img" />
+            </a>
+            <a href="https://medium.com/@0xmicho" target="_blank" class="social-icon" aria-label="Medium">
+              <i class="ph ph-medium-logo"></i>
+            </a>
+            <button id="discord-btn" class="social-icon" aria-label="Discord" type="button">
+              <i class="ph ph-discord-logo"></i>
+            </button>
+          </div>
+        </div>
+
+        <a href="#about" class="scroll-down">
+          <p>Scroll to explore</p>
+          <i class="ph ph-arrow-down"></i>
+        </a>
+      </section>
+
+      <!-- ═══ About / Life.log Timeline ══════════════════════════════════ -->
+      <section id="about" class="about section">
+        <div class="section-container">
+          <div class="section-header center">
+            <span class="mono-label">// Initialize Data</span>
+            <h2>Life.log</h2>
+            <p class="error-sub">HTTP 200 OK — Content retrieved successfully.</p>
+          </div>
+
+          <div class="timeline">
+
+            <div class="timeline-item tilt-card" data-tilt>
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">July 2025 — Present</div>
+              <div class="timeline-content">
+                <h3>The Bug Bounty Era</h3>
+                <p>Officially entered the cybersecurity and bug bounty space. I began hunting for critical vulnerabilities, applying my offensive security skills on real-world targets, and deep-diving into advanced Web and API pentesting.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item tilt-card" data-tilt>
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2023 — 2025</div>
+              <div class="timeline-content">
+                <h3>The Real Foundation</h3>
+                <p>Began my true programming journey. I learned Python as my first language over 6 months and built solid projects. I had to carefully balance my learning with my middle school studies, taking month-long breaks to focus on exams — which taught me discipline.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item tilt-card" data-tilt>
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2021 — 2023</div>
+              <div class="timeline-content">
+                <h3>The Digital Hustle</h3>
+                <p>Acted as a digital merchant on Discord, selling bot services and discord server setups. I spent my time exploring open-source GitHub projects, tweaking code, and proudly changing "made by" to my name — a stepping stone to understanding how applications worked under the hood.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item tilt-card" data-tilt>
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2019 — 2021</div>
+              <div class="timeline-content">
+                <h3>The Script Kiddie Days</h3>
+                <p>At age 10, armed with an old laptop, I loved the tech field but couldn't code. I ran ready-made scripts until a harsh lesson hit: a ransomware attack encrypted my files and compromised my credentials, exposing them in over 13 public data breaches.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ Skills & Arsenal ════════════════════════════════════════════ -->
+      <section id="skills" class="skills-section section">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="mono-label">// Loadout</span>
+            <h2>Skills &amp; Arsenal</h2>
+            <div class="header-line"></div>
+          </div>
+
+          <div class="skills-grid">
+
+            <!-- Card 1: Programming Languages -->
+            <div class="skill-card tilt-card" data-tilt>
+              <div class="skill-card-header">
+                <div class="skill-card-icon">
+                  <i class="ph ph-code"></i>
+                </div>
+                <h3>Programming Languages</h3>
+              </div>
+              <div class="skill-items">
+                <div class="skill-item">
+                  <i class="ph ph-snake-logo"></i>
+                  <span>Python</span>
+                </div>
+                <div class="skill-item">
+                  <i class="ph ph-html-logo"></i>
+                  <span>HTML</span>
+                </div>
+                <div class="skill-item">
+                  <i class="ph ph-javascript-logo"></i>
+                  <span>JavaScript</span>
+                </div>
+                <div class="skill-item">
+                  <i class="ph ph-terminal"></i>
+                  <span>Bash</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Offensive Tools -->
+            <div class="skill-card tilt-card" data-tilt>
+              <div class="skill-card-header">
+                <div class="skill-card-icon">
+                  <i class="ph ph-sword"></i>
+                </div>
+                <h3>Offensive Tools</h3>
+              </div>
+              <div class="skill-items">
+                <div class="skill-item">
+                  <i class="ph ph-bug"></i>
+                  <span>Burp Suite</span>
+                </div>
+                <div class="skill-item">
+                  <i class="ph ph-lightning"></i>
+                  <span>Caido</span>
+                </div>
+                <div class="skill-item">
+                  <i class="ph ph-skull"></i>
+                  <span>Metasploit</span>
+                </div>
+                <div class="skill-item">
+                  <i class="ph ph-radar"></i>
+                  <span>Nmap</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Security Domains -->
+            <div class="skill-card tilt-card" data-tilt>
+              <div class="skill-card-header">
+                <div class="skill-card-icon">
+                  <i class="ph ph-shield-checkered"></i>
+                </div>
+                <h3>Security Domains</h3>
+              </div>
+              <div class="skill-items">
+                <div class="skill-item">
+                  <i class="ph ph-globe"></i>
+                  <span>Web2 Pentesting</span>
+                </div>
+                <div class="skill-item">
+                  <i class="ph ph-currency-dollar-simple"></i>
+                  <span>Bug Bounty Hunting</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>Built with <i class="ph-fill ph-coffee"></i> by 0xMicho.</p>
+        <p class="mono-text">© 2026 All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Discord Toast Notification -->
+    <div id="discord-toast" class="discord-toast" role="alert" aria-live="polite">
+      <div class="discord-toast-inner">
+        <div class="discord-toast-icon">
+          <i class="ph-fill ph-discord-logo"></i>
+        </div>
+        <div class="discord-toast-body">
+          <p class="discord-toast-title">Discord</p>
+          <p><strong>Username:</strong> ay7.m</p>
+          <p><strong>ID:</strong> 834493688327176222</p>
+        </div>
+        <button class="discord-toast-close" id="discord-toast-close" aria-label="Close">
+          <i class="ph ph-x"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
